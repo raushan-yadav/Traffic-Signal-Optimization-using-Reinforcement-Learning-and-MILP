@@ -110,9 +110,9 @@ class TrafficSignalComparison:
         milp_simulation_results = self._simulate_fixed_time_control(solution)
         
         print("MILP Simulation Results:")
-        print(f"  Average Delay:    {milp_simulation_results['avg_delay']:.2f} seconds")
+        print(f"  Average Delay:    {milp_simulation_results['average_delay']:.2f} seconds")
         print(f"  Vehicles Passed:  {milp_simulation_results['vehicles_passed']:.0f}")
-        print(f"  Average Queue:    {milp_simulation_results['avg_queue']:.2f} vehicles")
+        print(f"  Average Queue:    {milp_simulation_results['average_queue_length']:.2f} vehicles")
         
         self.results['milp'] = {
             'solution': solution,
